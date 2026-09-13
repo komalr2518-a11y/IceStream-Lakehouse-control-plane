@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "IceStream: Setup",
+      "type": "shell",
+      "command": "powershell",
+      "args": ["-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\scripts\\setup.ps1"],
+      "problemMatcher": []
+    },
+    {
+      "label": "IceStream: API",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "uvicorn", "app.main:app", "--reload", "--host", "127.0.0.1", "--port", "8000"],
+      "options": { "cwd": "${workspaceFolder}\\backend" },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "icestream",
+        "pattern": { "regexp": "^(.*)$", "message": 1 },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Uvicorn running|Started reloader process",
+          "endsPattern": "Application startup complete"
+        }
+      },
+      "presentation": { "group": "icestream", "panel": "dedicated" }
+    },
+    {
+      "label": "IceStream: UI",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "icestream-ui",
+        "pattern": { "regexp": "^(.*)$", "message": 1 },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "vinext dev|scanning dependencies",
+          "endsPattern": "Local:.*http://localhost:3000"
+        }
+      },
+      "presentation": { "group": "icestream", "panel": "dedicated" }
+    },
+    {
+      "label": "IceStream: Start all",
+      "dependsOrder": "parallel",
+      "dependsOn": ["IceStream: API", "IceStream: UI"],
+      "problemMatcher": []
+    },
+    {
+      "label": "IceStream: Test backend",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "pytest", "-q"],
+      "options": { "cwd": "${workspaceFolder}\\backend" },
+      "problemMatcher": []
+    }
+  ]
+}
