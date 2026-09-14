@@ -1,0 +1,10 @@
+[
+  "tests/test_api.py::test_health_dashboard_rules_and_validation",
+  "tests/test_api.py::test_missing_snapshot_returns_404",
+  "tests/test_engine.py::test_circuit_breaker_quarantines_bad_data_and_recovers",
+  "tests/test_engine.py::test_snapshot_is_created_after_accepted_commit_boundary",
+  "tests/test_rules.py::test_null_tax_is_rejected_by_presence_and_plausibility_rules",
+  "tests/test_rules.py::test_unapproved_schema_is_critical",
+  "tests/test_rules.py::test_unknown_currency_is_warning_only",
+  "tests/test_rules.py::test_valid_checkout_event_passes_all_rules"
+]
