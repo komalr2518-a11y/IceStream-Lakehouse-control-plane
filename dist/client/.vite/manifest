@@ -1,0 +1,75 @@
+{
+  "_framework-DTZGTDtF.js": {
+    "file": "_next/static/chunks/framework-DTZGTDtF.js",
+    "name": "framework",
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js"
+    ]
+  },
+  "_rolldown-runtime-hePW80VL.js": {
+    "file": "_next/static/chunks/rolldown-runtime-hePW80VL.js",
+    "name": "rolldown-runtime"
+  },
+  "_vinext-Cz6H68w1.js": {
+    "file": "_next/static/chunks/vinext-Cz6H68w1.js",
+    "name": "vinext",
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js",
+      "_framework-DTZGTDtF.js"
+    ],
+    "dynamicImports": [
+      "_vinext-Cz6H68w1.js"
+    ]
+  },
+  "app/components/ResizeObserverGuard.tsx": {
+    "file": "_next/static/chunks/ResizeObserverGuard-DwhuzO_h.js",
+    "name": "ResizeObserverGuard",
+    "src": "app/components/ResizeObserverGuard.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js",
+      "_framework-DTZGTDtF.js"
+    ]
+  },
+  "app/page.tsx": {
+    "file": "_next/static/chunks/page-DP69POTm.js",
+    "name": "page",
+    "src": "app/page.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js",
+      "_framework-DTZGTDtF.js"
+    ],
+    "css": [
+      "_next/static/css/page.CtuNohLw.css"
+    ]
+  },
+  "node_modules/vinext/dist/shims/layout-segment-context.js": {
+    "file": "_next/static/chunks/layout-segment-context-nHIsOUiN.js",
+    "name": "layout-segment-context",
+    "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js",
+      "_framework-DTZGTDtF.js",
+      "_vinext-Cz6H68w1.js"
+    ]
+  },
+  "virtual:vinext-app-browser-entry": {
+    "file": "_next/static/chunks/index-B6Vwg7b_.js",
+    "name": "index",
+    "src": "virtual:vinext-app-browser-entry",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js",
+      "_framework-DTZGTDtF.js",
+      "_vinext-Cz6H68w1.js"
+    ],
+    "dynamicImports": [
+      "_vinext-Cz6H68w1.js",
+      "node_modules/vinext/dist/shims/layout-segment-context.js",
+      "app/page.tsx",
+      "app/components/ResizeObserverGuard.tsx"
+    ]
+  }
+}
